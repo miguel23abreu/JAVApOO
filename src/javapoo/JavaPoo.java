@@ -12,6 +12,8 @@ public class JavaPoo {
         conta1.depositar(58.5f);
         conta1.sacar(50);
         conta1.MostrarDados();
+        conta1.depositar(152f);
+        conta1.MostrarDados();
         //c2.status();
         /*c1.cor = "azul";
         c1.marca = "bic";

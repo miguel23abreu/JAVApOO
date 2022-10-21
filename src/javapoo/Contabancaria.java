@@ -70,52 +70,49 @@ public class Contabancaria {
                 this.status = true;
 	}
 	public void sacar(int valor){
-		int intSaldo = (int) this.saldo;
 		int N1 = 0, N2 = 0, N5 = 0, N10 = 0, N20 = 0, N50 = 0, N100 = 0, N200 = 0;
-		if(intSaldo >= valor && valor > 1){
+		if(this.saldo >= valor && valor > 1){
 			while(valor > 0){
 				if(valor >= 1 && valor < 2){
 					valor--;
-					intSaldo--;
+					this.saldo--;
 					N1++;
 				}
 				else if(valor >= 2 && valor < 5) {
 					valor -= 2;
-					intSaldo -= 2;
+					this.saldo -= 2;
 					N2++;
 				}
 				else if(valor >= 5 && valor < 10) {
 					valor -= 5;
-					intSaldo -= 5;
+					this.saldo -= 5;
 					N5++;
 				}
 				else if(valor >= 10 && valor < 20) {
 					valor -= 10;
-					intSaldo -= 10;
+					this.saldo -= 10;
 					N10++;
 				}
 				else if(valor >= 20 && valor < 50) {
 					valor -= 20;
-					intSaldo -= 20;
+					this.saldo -= 20;
 					N20++;
 				}
 				else if(valor >= 50 && valor < 100) {
 					valor -= 50;
-					intSaldo -= 50;
+					this.saldo -= 50;
 					N50++;
 				}
 				else if(valor >= 100 && valor < 200) {
 					valor -= 100;
-					intSaldo -= 100;
+					this.saldo -= 100;
 					N100++;
 				}
 				else{
 					valor -= 200;
-					intSaldo -= 200;
+					this.saldo -= 200;
 					N200++;
 				}
-                                valor = (int)(float) valor;
-                                this.saldo -= valor;
 			}
 			if(N1 >= 1){
 				System.out.printf("foi sacado %d notas de R$1,00\n", N1);
