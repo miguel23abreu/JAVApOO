@@ -57,7 +57,6 @@ public class Caneta {
         this.cor = cor;
         this.ponta = ponta;
         this.carga = carga;
-        
     }
     
     

@@ -70,7 +70,7 @@ public class Contabancaria {
                 this.status = true;
 	}
 	public void sacar(int valor){
-		int intSaldo = (int) saldo;
+		int intSaldo = (int) this.saldo;
 		int N1 = 0, N2 = 0, N5 = 0, N10 = 0, N20 = 0, N50 = 0, N100 = 0, N200 = 0;
 		if(intSaldo >= valor && valor > 1){
 			while(valor > 0){
@@ -114,36 +114,39 @@ public class Contabancaria {
 					intSaldo -= 200;
 					N200++;
 				}
+                                valor = (int)(float) valor;
+                                this.saldo -= valor;
 			}
 			if(N1 >= 1){
-				System.out.printf("foi sacado %d notas de R$1,00", N1);
+				System.out.printf("foi sacado %d notas de R$1,00\n", N1);
 			}
 			if(N2 >= 1){
-				System.out.printf("foi sacado %d notas de R$2,00", N2);
+				System.out.printf("foi sacado %d notas de R$2,00\n", N2);
 			}
 			if(N5 >= 1){
-				System.out.printf("foi sacado %d notas de R$5,00", N5);
+				System.out.printf("foi sacado %d notas de R$5,00\n", N5);
 			}
 			if(N10 >= 1){
-				System.out.printf("foi sacado %d notas de R$10,00", N10);
+				System.out.printf("foi sacado %d notas de R$10,00\n", N10);
 			}
 			if(N20 >= 1){
-				System.out.printf("foi sacado %d notas de R$20,00", N20);
+				System.out.printf("foi sacado %d notas de R$20,00\n", N20);
 			}
 			if(N50 >= 1){
-				System.out.printf("foi sacado %d notas de R$50,00", N50);
+				System.out.printf("foi sacado %d notas de R$50,00\n", N50);
 			}
 			if(N100 >= 1){
-				System.out.printf("foi sacado %d notas de R$100,00", N100);
+				System.out.printf("foi sacado %d notas de R$100,00\n", N100);
 			}
 			if(N200 >= 1){
-				System.out.printf("foi sacado %d notas de R$200,00", N200);
+				System.out.printf("foi sacado %d notas de R$200,00\n", N200);
 			}
 		}
 		else{
 			System.out.println("não foi póssivel sacar");
 		}
 	}
+        
         public void fecharconta(){
             if(this.saldo == 0){
                 this.status = false;
