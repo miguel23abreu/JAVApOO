@@ -70,6 +70,7 @@ public class Contabancaria {
                 this.status = true;
 	}
 	public void sacar(int valor){
+            if(status == true){
 		int N1 = 0, N2 = 0, N5 = 0, N10 = 0, N20 = 0, N50 = 0, N100 = 0, N200 = 0;
 		if(this.saldo >= valor && valor > 1){
 			while(valor > 0){
@@ -142,8 +143,24 @@ public class Contabancaria {
 		else{
 			System.out.println("não foi póssivel sacar");
 		}
+            }
+            else{
+                System.out.println("Conta bancaria inexistente");
+            }
 	}
-        
+        public void pagarconta(float valor){
+            if(status == true){
+                if(valor > 0){
+                    this.saldo -= valor;
+                }
+                else{
+                    System.out.println("Nao e possivel este tipo de valor");
+                }
+            }
+            else{
+                System.out.println("conta bancaria inexistente");
+            }
+        }
         public void fecharconta(){
             if(this.saldo == 0){
                 this.status = false;
@@ -157,6 +174,7 @@ public class Contabancaria {
         }
         public void MostrarDados(){
             if(this.status == true){
+                System.out.println("------------------------------------------------------------------------------");
                 System.out.println("Conta corrente: " + getConta_corrente());
                 System.out.println("Agencia: " + getAgencia());
                 System.out.println("Nome do proprietario: " + this.nome);
@@ -164,6 +182,7 @@ public class Contabancaria {
                 System.out.println("CPF: " + getCpf());
                 System.out.println("Saldo da conta: " + getsaldo());
                 System.out.println("Tipo: " + this.tipo);
+                System.out.println("------------------------------------------------------------------------------");
             }
             else{
                 System.out.println("Conta bancaria inexistente");

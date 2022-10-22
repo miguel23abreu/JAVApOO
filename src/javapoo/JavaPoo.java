@@ -1,19 +1,22 @@
 package javapoo;
-
+//Obs: Este é um projeto somente para testes e aprendizado
+//author: Miguel Abreu de Amorim Neto
+//Dentro deste projetos há as classes Caneta e Contabancaria;
 public class JavaPoo {
     
     public static void main(String[] args) {
-        Caneta c1 = new Caneta("bic", 0.5f, 90);
-        //c1.status();
-        Caneta c2 = new Caneta("model", 0.7f, 80);
-        
         Contabancaria conta1 = new Contabancaria();
         conta1.AbrirConta("00000", "11111", "02674029293", 21, "Miguel Abreu", "corrente");
+        conta1.MostrarDados();
         conta1.depositar(58.5f);
         conta1.sacar(50);
         conta1.MostrarDados();
-        conta1.depositar(152f);
+        conta1.depositar(1200f);
         conta1.MostrarDados();
+        conta1.sacar(159);
+        conta1.MostrarDados();
+        conta1.sacar(2000);
+        ///////////////////////////////////////////////////////////
         //c2.status();
         /*c1.cor = "azul";
         c1.marca = "bic";
