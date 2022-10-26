@@ -5,7 +5,7 @@ package javapoo;
 public class JavaPoo {
     
     public static void main(String[] args) {
-        Contabancaria conta1 = new Contabancaria();
+        /*Contabancaria conta1 = new Contabancaria();
         conta1.AbrirConta("00000", "11111", "02674029293", 21, "Miguel Abreu", "corrente");
         conta1.MostrarDados();
         conta1.depositar(58.5f);
@@ -15,7 +15,13 @@ public class JavaPoo {
         conta1.MostrarDados();
         conta1.sacar(159);
         conta1.MostrarDados();
-        conta1.sacar(2000);
+        conta1.sacar(2000);*/
+        ControleRemoto control = new ControleRemoto();
+        control.ligar();
+        control.maisvolume();
+        control.pause();
+        control.abrirmenu();
+        
         ///////////////////////////////////////////////////////////
         //c2.status();
         /*c1.cor = "azul";
